@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Odibee+Sans&family=Secular+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background-color: #181b24;
+}
+.grid-container {
+    display: grid;
+    --num-cols: 6;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-template-rows: 55% 45%;
+    width: 100%;
+    height: 100vh;
+}
+
+.pic-2 {
+    grid-column: 2 / span 3;
+}
+.pic-4 {
+    grid-column: 5 / 7;
+}
+.pic-5 {
+    grid-column: span 2;
+}
+.pic-6 {
+    grid-column: 3 / 5;
+}
+.pic-7 {
+    grid-area: 2 / 5 / 3 / 7;
+}
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(19,108,98,.3), rgb(19, 97, 88));
+}
+#back {
+    position: fixed;
+    top: 0;
+    padding-left: 35px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 70px;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(15, 13, 13);
+    transition: .3s;
+}
+#back h1:only-child {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+#back a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+.overlay-text > h1 {
+    font-family: 'Pacifico', cursive;
+}
+.links {
+    text-align: center;
+}
+.links li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+.links a {
+    text-decoration: none;
+    color: white;
+}
+#arrow {
+    position: absolute;
+    bottom: 55px;
+}
+#arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #06A8FF;
+    border-right: 3px solid #06A8FF;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -10px;
+    -webkit-animation: scroll 2s infinite;
+    animation: scroll 2s infinite;
+}
+#arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+#arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+/* Human Rights Lens Project */
+#human-rights {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+}
+.photo-documentary{
+    color: white;
+    font-size: 1.9vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+.box-5{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background: black;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    margin: auto;
+    display: flex;
+    transition: .5s;
+}
+.box-5:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.human-rights-container{
+    flex: 1.2;
+}
+.tekst-4{
+    flex: 1;
+    font-size: 1vw;
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+    color: white;
+    line-height: 1.6;
+}
+.tekst-4 h2{
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+    padding-bottom: 15px;
+}
+.tekst-4, .tekst-3 {
+    line-height: 2;
+}
+.human-rights-bilder{
+    display: flex;
+}
+.human-rights-bilder img{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.human-rights-bilder img:hover{
+    transform: scale(0.9);
+}
+.modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+.modalcontent{
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalimg{
+    width: 80%;
+    max-width: 700px;
+}
+.close{
+    position: absolute;
+    top: 1em;
+    color: white;
+    right: 1.5em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+@keyframes zoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.modal.appear{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal.appear .modalimg,
+.modal.appear .modaltxt{
+    animation: zoom 0.3s linear;
+}
+
+/* Human Rights Lens Project */
+
+/* Photo Story */
+#halloween{
+    min-height: 100vh;
+    display: grid;
+    align-content: center
+}
+.photo-story{
+    color: white;
+    font-size: 1.9vw;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    margin-bottom: 20px;
+}
+.box-4{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: black;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    margin: auto;
+    transition: .5s;
+    display: flex;
+}
+.box-4:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.tekst-3 h2{
+    font-family:'Franklin Gothic Medium';
+    padding-bottom: 15px;
+}
+.tekst-3{
+    font-size: 1vw;
+  
+    width: 40%;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+.slidershow{
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    height: 60%;
+ 
+}
+.navigation{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar{
+    width: 3.9vw;
+    height: 1.7vh;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background: #fff;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide .slide_img{
+    width: 100%;
+    height: 100%;
+}
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+/* Photo Story */
+
+@media screen and (min-width: 1000px) {
+    #back h1:only-child {
+        transition: .2s all ease;
+    }
+    #back h1:only-child:hover {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #back {
+        padding-left: 15px;
+    }
+    .grid-container {
+        --num-cols: 3;
+    }
+    .grid-container * {
+        display: none;
+    }
+    .pic-1 {
+        grid-area: 1 / 1 / 2 /2;
+        display: block;
+    }
+    .pic-2 {
+        grid-area: 1 / 2 / 2 / 4;
+        object-position: 65% 35%;
+        display: block;
+    }
+    .pic-4 {
+        grid-area: 2 / 1 / 3 / 4;
+        display: block;
+    }
+    .box-5 {
+        flex-direction: column;
+    }
+    .human-rights-bilder {
+        height: 100%
+    }
+    .tekst-4 { 
+        font-size: 16px;
+    }
+    .photo-documentary {
+        font-size: 25px;        
+    }
+    .photo-story {
+        font-size: 25px;
+    }
+    .box-4 {
+        flex-direction: column;
+        
+    }
+    .slidershow {
+        order: 1;
+        width: 100%;
+    }
+    .tekst-3 {
+        font-size: 16px;
+        order: 2;
+        width: 100%;
+    }
+    .tekst-3 h2, .tekst-4 h2 {
+        padding-top: 15px;
+    }
+    .bar {
+        width: 37px;
+        height: 20px;
+    }
+    .navigation {
+        bottom: 6px;
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander | Contacts</title>
+    <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--Navigasjon-->
+    <header>
+        <nav class="navbar4">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_me.html">About me</a></li>
+                <li><a href="Work-icons.html">Work</a></li>
+                <li><a class="ActiveContacts" href="Contacts.html">Contacts</a></li>
+            </ul>
+        </nav>
+        <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <ul class="mobile-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About_me.html">About me</a></li>
+                <li><a href="Work-icons.html">Work</a></li>
+                <li><a class="ActiveContacts" href="Contacts.html">Contacts</a></li>
+            </ul>
+        </div>
+        <script src="About_me.js"></script>
+    </header>
+    <!--Navigasjon-->
+
+    <div class="container">
+        <form action="https://formspree.io/f/xeqndajn" target="_blank" method="POST">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Email id" required>
+            <input type="text" id="phone" name="number" placeholder="Phone no.">
+            <select name="continent">
+                <option>Europe</option>
+                <option>Asia</option>
+                <option>Africa</option>
+                <option>Australia</option>
+                <option>North America</option>
+                <option>South America</option>
+                <option>Antartica</option>
+            </select>
+            <textarea id="message" rows="4" name="message" placeholder="Write your message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>

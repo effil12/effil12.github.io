@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="coding.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Coding</title>
+</head>
+
+<body>
+    <div id="opening-container">
+        <div class="overlay-text">
+            <div id="back">
+                <a href="/Work-icons.html">
+                    <h1>back</h1>
+                </a>
+            </div>
+            <h1>Coding</h1>
+            <div class="links">
+                <h2 style=" color: yellow; font-family: 'Secular One', sans-serif;">Links</h2>
+                <ul>
+                    <li><a href="#the-eggcelent-warrior">
+                            <h3 style="font-family: 'Poppins', sans-serif; font-weight: 500;">Game Development</h3>
+                        </a></li>
+                </ul>
+            </div>
+            <div id="arrow">
+                <a href="#the-eggcelent-warrior">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="the-eggcelent-warrior">
+            <div class="overskrift">
+                <h1>Game Development</h1>
+            </div>
+            <div class="wrapper">
+                <div class="text">
+                    <h2>The Eggcelent Warrior</h2>
+                    <p>
+                        The Eggcelent Warrior is a 2D game that I and 4 other people made. 
+                        It was created by using Unity engine. 
+                        My responsibility was the Unity development which mean the layout designing of the scenes, menus  and programming in C#.  
+                        <br><br>
+                        The game is about a chicken who has lost it's rooster and has to fight through 5 dimensions to save him. With every dimension being harder than the previous.
+                    </p>
+                    
+                </div>
+                <div class="vid-wrap">
+                    <video width="100%" height="100%" autoplay muted loop id="myvideo">
+                        <source src="/work-icon-scripts/coding/The_Eggcelent_Warrior.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        var lastScrolltop = 0;
+        back = document.getElementById("back");
+        window.addEventListener("scroll", function () {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrolltop) {
+                back.style.top = "-70px";
+                back.style.boxShadow = "0 0 0"
+                back.style.color = "black"
+            } else {
+                back.style.top = "0";
+                back.style.color = "white"
+            }
+            lastScrolltop = scrollTop;
+        })
+    </script>
+</body>
+
+</html>

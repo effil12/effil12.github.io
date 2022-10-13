@@ -1,0 +1,482 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+    margin: 0;
+}
+h1{
+    margin: 0;
+}
+
+body{
+    background-color: rgb(46, 43, 43) ;
+}
+
+/* Navigasjon */
+.navbar3{
+    background-color: black;
+    border-radius: 55px;
+    width: 33%;
+    position:relative;
+    margin-top: 10px;
+    left: 9%;
+    text-align: center;
+    padding: 2px; 
+    font-size: 1.82vw;
+}
+.navbar3 li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+.navbar3 a{
+    text-decoration: none;
+    color: #a0a0a0;
+    font-family: sans-serif;
+    position: relative;
+}
+.navbar3 a::after{
+    content: "";
+    background: #ff3c78;
+    height: 3px;
+    width: 0%;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.navbar3 a:hover{
+    color: #ffffff;
+}
+.navbar3 a:hover::after{
+    width: 100%;
+}
+.navbar3 a.ActiveWork{
+    color: white;
+}
+/* Navigasjon */
+
+
+/* MatRabatt */
+.matrabatt{
+    padding-top: 15px;
+}
+.UX-UI{
+    color: white;
+    text-align: center;
+    font-size: 2.2vw;
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+.box-1{
+    position: relative;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    width: 60%;
+    transition: .5s;
+}
+.box-1:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.content{
+    font-size: 1.4vw;
+    padding: 30px;
+    font-family: Cambria;
+}
+.content h2{
+    margin: 0;
+    text-align: center;
+    padding-bottom: 15px;
+    font-family:'Franklin Gothic Medium';
+}
+.imgBx{
+    position: relative;
+}
+
+.imgBx .image{
+    display: none;
+}
+.imgBx .image img{
+    width: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+.imgBx .button{
+    position: absolute;
+    top: 42.5%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+.imgBx .button a{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    user-select: none;
+}
+.imgBx .button .prev{
+    border-radius: 0 5px 5px 0;
+}
+
+.imgBx .button .next{
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: 310px;
+}
+.image_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family:sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.image_overlay-blur{
+    backdrop-filter: blur(5px);
+}
+.image_overlay > *{
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+.image_overlay:hover{
+    opacity: 1;
+}
+.image_overlay:hover > *{
+    transform: translateY(0);
+}
+.image_title{
+    font-size: 30px;
+    position:absolute;
+    top: 40%;
+    text-decoration: underline;
+}
+.image_description{
+    font-size: 20px;
+    padding-top: 5px;
+    position: absolute;
+    top: 45%;
+}
+/* MatRabatt */
+
+/* Car Go Vroom */
+.car_go_vroom{
+    padding-top: 120px;
+}
+.film-video{
+    color: white;
+    font-size: 2.2vw;
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+.box-2{
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+.box-2:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.overskrift{
+    font-size: 1.4vw;
+    padding-bottom: 10px;
+    font-family:'Franklin Gothic Medium';
+}
+.overskrift h2{
+    margin: 0;
+}
+.tekst-2{
+    font-size: 1.4vw;
+    font-family: cambria;
+}
+/* Car Go Vroom */
+
+/* Våpenskjold */
+.graphic-design{
+    font-size: 2.2vw;
+    color: white;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+.box-3{
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    margin: auto;
+    display: flex;
+    transition: .5s;
+}
+.box-3:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.skjold{
+    width: 55%;
+}
+.box-3 .skjold img{
+    width: 100%;
+}
+.content-2{
+    width: 45%;
+    font-family: cambria;
+    font-size: 1.4vw;
+    padding-top: 10%;
+    background: gray;
+    border-radius: 4px;
+    text-align: center;
+}
+.content-2 h2{
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+    padding-bottom: 15px;
+}
+
+.våpenskjold{
+    padding-top: 120px;
+}
+/* Våpenskjold */
+
+/* Photo Story */
+.halloween{
+    padding-top: 120px;
+}
+.photo-story{
+    color: white;
+    font-size: 2.2vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+.box-4{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgb(29, 27, 27);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    margin: auto;
+    transition: .5s;
+    display: flex;
+}
+.box-4:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.tekst-3 h2{
+    font-family:'Franklin Gothic Medium';
+    padding-bottom: 15px;
+    margin: 0;
+}
+.tekst-3{
+    font-size: 1.4vw;
+    font-family: sans-serif;
+    width: 40%;
+    padding: 30px;
+    color: white;
+}
+.slidershow{
+    overflow: hidden;
+    position: relative;
+    width: 60%;
+    height: 60%;
+    margin-right: 10px;
+}
+.navigation{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar{
+    width: 3.9vw;
+    height: 1.7vh;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background: #fff;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide .slide_img{
+    width: 100%;
+    height: 100%;
+}
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+/* Photo Story */
+
+/* Human Rights Lens Project */
+
+.human-rights{
+    padding-top: 120px;
+}
+.photo-documentary{
+    color: white;
+    font-size: 2.2vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 5px;
+}
+.box-5{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    margin: auto;
+    display: flex;
+    transition: .5s;
+}
+.box-5:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.human-rights-container{
+    width: 60%;
+}
+
+.human-rights-bilder{
+    display: flex;
+}
+.human-rights-bilder img{
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+.human-rights-bilder img:hover{
+    transform: scale(0.9);
+}
+.modal{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+.modalcontent{
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalimg{
+    width: 80%;
+    max-width: 700px;
+}
+.close{
+    position: absolute;
+    top: 1em;
+    color: white;
+    right: 1.5em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+@keyframes zoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.modal.appear{
+    opacity: 1;
+    pointer-events: all;
+}
+.modal.appear .modalimg,
+.modal.appear .modaltxt{
+    animation: zoom 0.3s linear;
+}
+.tekst-4{
+    width: 40%;
+    font-size: 1.4vw;
+    font-family: cambria;
+    padding: 30px;
+}
+.tekst-4 h2{
+    margin: 0;
+    font-family:'Franklin Gothic Medium';
+    padding-bottom: 15px;
+}
+
+/* Human Rights Lens Project */

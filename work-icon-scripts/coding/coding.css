@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Odibee+Sans&family=Secular+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #181b24;
+    word-break: break-word;
+}
+
+#opening-container {
+    height: 100vh;
+    background-image: url("/img/code.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(19, 108, 98, .3), rgb(19, 97, 88));
+}
+
+#back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 35px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 70px;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(15, 13, 13);
+    transition: .3s;
+}
+
+#back h1:only-child {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+#back a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+.overlay-text>h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    color: yellow;
+}
+
+.links {
+    text-align: center;
+}
+
+.links li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+#arrow {
+    position: absolute;
+    bottom: 55px;
+}
+
+#arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #06A8FF;
+    border-right: 3px solid #06A8FF;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -10px;
+    -webkit-animation: scroll 2s infinite;
+    animation: scroll 2s infinite;
+}
+
+#arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+#arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+
+#the-eggcelent-warrior {
+    min-height: 100vh;
+    display: grid;
+    align-content: center;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 730px;
+    padding: 15px;
+    background-color: #14171f;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.overskrift {
+    color: rgb(7, 129, 119);
+    font-size: 1.9vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.text {
+    line-height: 1.8;
+    padding: 40px;
+    padding-top: 0;
+    font-size: 1vw;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text p {
+    padding-top: 17px;
+}
+
+.vid-wrap {
+    position: relative;
+}
+
+#myvideo {
+    position: absolute;
+    object-fit: cover;
+    object-position: left;
+}
+
+.text h2 {
+    color: rgb(7, 129, 119);
+    padding-bottom: 15px;
+    border-bottom: 2px solid #292c4d;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #back h1:only-child {
+        transition: .2s all ease;
+    }
+
+    #back h1:only-child:hover {
+        font-size: 45px;
+    }
+
+    .vid-wrap {
+        width: 60%;
+        max-width: 630px;
+    }
+
+    .text {
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    #opening-container {
+        background-size: cover;
+        background-position: center right -50px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .overskrift {
+        font-size: 25px;
+    }
+    .text h2 {
+        padding-top: 15px;
+    }
+    .text {
+        padding: 0;
+        order: 2;
+        font-size: 16px;
+    }
+
+    #myvideo {
+        width: 100%;
+        order: 1;
+    }
+
+    .vid-wrap {
+        flex: 1;
+        max-width: none;
+    }
+}
+
+@media speech and (max-width: 1000px) {
+    .text {
+        order: 1;
+    }
+
+    #myvideo {
+        order: 2;
+    }
+}

@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Odibee+Sans&family=Secular+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #181b24;
+}
+
+#opening-container {
+    height: 100vh;
+    background-image: url("/img/vopenskjold_v1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(19, 108, 98, .3), rgb(19, 97, 88));
+}
+
+#back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 35px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 70px;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(15, 13, 13);
+    transition: .3s;
+}
+
+#back h1:only-child {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+#back a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+.overlay-text > h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem; 
+    color: purple;
+}
+
+.links {
+    text-align: center;
+}
+
+.links li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+#arrow {
+    position: absolute;
+    bottom: 55px;
+}
+
+#arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #06A8FF;
+    border-right: 3px solid #06A8FF;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -10px;
+    -webkit-animation: scroll 2s infinite;
+    animation: scroll 2s infinite;
+}
+
+#arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+#arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+
+/* MatRabatt */
+#matrabatt {
+    min-height: 100vh;
+    display: grid;
+    align-content: center
+}
+
+.UX-UI {
+    color: floralwhite;
+    font-size: 1.9vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.box-1 {
+    position: relative;
+    margin: auto;
+    display: flex;
+    padding: 10px;
+    background: rgb(81 131 175);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    width: 60%;
+    transition: .5s;
+    height: 70vh;
+}
+.box-1:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+#app {
+    position: relative;
+    flex: 1;
+    padding-top: 46.15%;
+}
+#app iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.content {
+    font-size: 1vw;
+    line-height: 1.8;
+    flex: 1;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content h2 {
+    color: floralwhite;
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #292c4d;
+}
+.content p {
+    padding-top: 16px;
+    padding-bottom: 15px;
+}
+.imgBx {
+    position: relative;
+}
+
+.imgBx .image {
+    display: none;
+}
+
+.imgBx .image img {
+    width: 350px;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+
+.imgBx .button {
+    position: absolute;
+    top: 42.5%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.imgBx .button a {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    user-select: none;
+}
+
+.imgBx .button .prev {
+    border-radius: 0 5px 5px 0;
+}
+
+.imgBx .button .next {
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    left: 310px;
+}
+
+.image_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image_overlay-blur {
+    backdrop-filter: blur(5px);
+}
+
+.image_overlay>* {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image_overlay:hover {
+    opacity: 1;
+}
+
+.image_overlay:hover>* {
+    transform: translateY(0);
+}
+
+.image_title {
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    text-decoration: underline;
+}
+
+.image_description {
+    font-size: 20px;
+    padding-top: 5px;
+    position: absolute;
+    top: 45%;
+}
+
+/* MatRabatt */
+/* Våpenskjold */
+#vapenskjold {
+    min-height: 100vh;
+    display: grid;
+    align-content: center
+}
+
+.graphic-design {
+    color: floralwhite;
+    font-size: 1.9vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+
+.box-3 {
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    background: rgb(81 131 175);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    margin: auto;
+    display: flex;
+    transition: .5s;
+}
+
+.box-3:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+
+.skjold {
+    width: 55%;
+}
+
+.box-3 .skjold img {
+    width: 100%;
+}
+
+.content-2 {
+    line-height: 2;
+    color: floralwhite;
+    width: 45%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
+    padding: 10% 10px 0 10px;
+    background: #305280;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.content-2 h2 {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium';
+    padding-bottom: 15px;
+}
+
+/* Våpenskjold */
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #back h1:only-child {
+        transition: .2s all ease;
+    }
+
+    #back h1:only-child:hover {
+        font-size: 45px;
+    }
+    .content, .content-2{
+        list-style: 1.6 ;
+    }
+}
+@media screen and (max-width: 1578px) {
+    .box-1 {
+        height: auto;
+    }
+    #app {
+        aspect-ratio: 9 / 19.5;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .content h2 {
+        padding-top: 15px;
+    }
+    #back {
+        padding-left: 15px;
+    }
+    .overlay-text > h1 {
+        font-size: 3rem;
+    }
+    .box-1 {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content {
+        font-size: 16px;
+    }
+    #app {
+        aspect-ratio: 9 / 19.5;
+        padding:0;
+        width: 70%;
+    }
+    .graphic-design, .UX-UI {
+        font-size: 25px; 
+    }
+    .box-3 {
+        width: 100%;
+        flex-direction: column;
+    }
+    .skjold {
+        width: 100%;
+        order: 1;
+    }
+    .content-2 {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        width: 100%;
+        order: 2;
+        font-size: 16px;
+
+    }
+    .content-2 h2 {
+        padding-bottom: 10px;
+    }
+}

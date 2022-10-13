@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:not(ul) {
+    margin: 0;
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    overflow-y: overlay;
+}
+body {
+    background-color: #181b24;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    font-family: cambria;
+    margin: 0;
+}
+
+h4 {
+    font-family: cambria;
+    margin: 0;
+}
+
+/* Navigasjon */
+.navbar4 {
+    background-color: black;
+    border-radius: 55px;
+    width: 500px;
+    position: relative;
+    margin-top: 10px;
+    left: 9%;
+    text-align: center;
+    padding: 2px;
+    font-size: 28px;
+}
+
+.navbar4 li {
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+
+.navbar4 a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.navbar4 a::after {
+    content: "";
+    background: #ff3c78;
+    height: 3px;
+    border-radius: 2px;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.navbar4 a:hover {
+    color: #ffffff;
+}
+
+.navbar4 a:hover::after {
+    width: 100%;
+}
+
+.navbar4 a.ActiveContacts {
+    color: white;
+}
+
+/* Navigasjon */
+
+/* Contacts */
+.contacts {
+    font-size: 2.2vw;
+    color: white;
+    font-family: cursive;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    width: 40%;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgb(29, 27, 27);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    transition: .5s;
+    border: 1px solid red;
+}
+
+.box:hover:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+
+.emails {
+    font-size: 2.2vw;
+    color: white;
+}
+
+.email {
+    font-size: 2vw;
+    font-family: 'poppins', sans-serif;
+}
+
+.socials {
+
+    text-align: center;
+    color: white;
+    border: 1px solid red;
+}
+
+.socials h2 {
+    font-size: 1.3vw;
+}
+
+.fa {
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon div {
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+
+.bar1 {
+    margin-bottom: 6px;
+}
+
+.bar2 {
+    margin-bottom: 6px;
+}
+
+.open .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+    opacity: 0;
+}
+
+.open .bar3 {
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu {
+    display: none;
+    width: 100%;
+    margin: 0;
+}
+
+.mobile-menu .ActiveContacts {
+    color: white;
+}
+.container {
+    width: 100%;
+    margin-top: 100px;
+}
+form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: auto;
+}
+form h3 {
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+form input, form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+form button {
+    padding: 15px;
+    background-color: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+form select {
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    * {
+        margin: 0;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    #hamburger-icon {
+        width: 100%;
+        display: block;
+        background-color: black;
+        padding: 20px;
+        border-radius: 0 0 6px 6px;
+    }
+
+    .mobile-menu li {
+        list-style: none;
+        padding: 7px;
+    }
+
+    .mobile-menu a {
+        text-decoration: none;
+        font-family: 'poppins', sans-serif;
+        font-size: 19px;
+        float: right;
+        color: #a0a0a0;
+        margin-right: 10px;
+    }
+}
+

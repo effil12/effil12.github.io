@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Odibee+Sans&family=Secular+One&display=swap');
+:not(ul) {
+    margin: 0;
+}
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #181b24;
+    word-wrap: break-word;
+}
+
+/* Navigasjon */
+.navbar2{
+    background-color: black;
+    border-radius: 55px;
+    width: 500px;
+    position:relative;
+    margin-top: 10px;
+    left: 9%;
+    text-align: center;
+    padding: 2px;
+    font-size: 28px;
+}
+.navbar2 li{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+}
+.navbar2 a{
+    text-decoration: none;
+    color: #a0a0a0;
+    font-family: sans-serif;
+    position: relative;
+}
+.navbar2 a::after{
+    content: "";
+    background: #ff3c78;
+    height: 3px;
+    border-radius: 2px;
+    width: 0%;
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.navbar2 a:hover{
+    color: #ffffff;
+}
+.navbar2 a:hover::after{
+    width: 100%;
+}
+.navbar2 a.ActiveAboutMe{
+    color: white;
+}
+/* Navigasjon */
+
+/* About Me */
+.about_me {
+    margin-top: 5vw;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin: auto;
+    width: 100%;
+    max-width: 1500px;
+    background-color: #14171f;
+    border-radius: 4px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 10px 0 10px;
+}
+.bilde{
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 510px;
+}
+.tekst-container{
+    color: white;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 850px;
+    align-self: center;
+    font-family: 'Poppins',sans-serif;
+    padding: 1vw;
+}
+.tekst-container h1{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #292c4d;
+}
+.pers-info {
+    padding-top: 20px;
+    line-height: 2;
+}
+.pers-info, .list, .list ul, .list li {
+    float: left;
+} 
+.pers-info h2 {
+    font-weight: 500;
+}
+.list ul {
+    width: 80%;
+}
+.list li {
+    list-style: none;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.list span {
+    color: red;
+}
+.paragraf{
+    font-size: 17px;
+}
+
+#hamburger-icon{
+    display: none;
+    cursor: pointer;
+}
+#hamburger-icon div{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 2px;
+}
+.bar1 {
+    margin-bottom: 6px;
+}
+.bar2 {
+    margin-bottom: 6px;
+}
+.open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2{
+    opacity: 0;
+}
+.open .bar3{
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu{
+    display: none;
+    width: 100%;
+    margin: 0;
+}
+.mobile-menu .ActiveAboutMe {
+    color: white;
+}
+
+ @media screen and (max-width: 1000px) {
+    * {
+        margin: 0;
+    }
+    header nav{
+        display: none;
+    }
+    #hamburger-icon{
+        width: 100%;
+        display: block;
+        background-color: black;
+        padding: 20px;
+        border-radius: 0 0 6px 6px;
+    }
+    .mobile-menu li{
+        list-style: none;
+        padding: 7px;
+    }
+    .mobile-menu a{
+        text-decoration: none;
+        font-family: 'poppins', sans-serif;
+        font-size: 19px;
+        float: right;
+        color: #a0a0a0;
+        margin-right: 10px;
+    }
+    .about_me{
+        margin-top: 15px;
+    }
+    .container{
+        flex-direction: column;
+        width: 90%;
+    }
+    .bilde{
+        width: 100%;
+    }
+    .tekst-container{
+        width: 100%;
+        margin-top: 10px;
+        flex-basis: content;
+    }
+    .tekst{
+        margin: unset;
+    }
+    .tekst h1{
+        font-size: 30px;
+    }
+    .list ul {
+        width: 100%;
+    }
+    .list li {
+        width: 100%;
+    }
+    .list li, .paragraf {
+        font-size: 16px;
+    }
+    .paragraf {
+        line-height: 30px;
+    }
+}
+/* About Me */

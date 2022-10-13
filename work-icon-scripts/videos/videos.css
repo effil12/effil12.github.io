@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Odibee+Sans&family=Secular+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #181b24;
+}
+
+#opening-container {
+    height: 100vh;
+    background-image: url("/img/car_go_vroom.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.grid-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(19, 108, 98, .3), rgb(19, 97, 88));
+}
+
+#back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 35px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 70px;
+    z-index: 1;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(15, 13, 13);
+    transition: .3s;
+}
+
+#back h1:only-child {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+#back a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+}
+
+.overlay-text > h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem; 
+    color: yellowgreen;
+}
+
+.links {
+    text-align: center;
+}
+
+.links li {
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+#arrow {
+    position: absolute;
+    bottom: 55px;
+}
+
+#arrow span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 3px solid #06A8FF;
+    border-right: 3px solid #06A8FF;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: -10px;
+    -webkit-animation: scroll 2s infinite;
+    animation: scroll 2s infinite;
+}
+
+#arrow span:nth-child(2) {
+    animation-delay: -.2s;
+}
+
+#arrow span:nth-child(3) {
+    animation-delay: -.4s;
+}
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+/* Car Go Vroom */
+#car_go_vroom{
+    min-height: 100vh;
+    display: grid;
+    align-content: center
+}
+.film-video{
+    color: white;
+    font-size: 1.9vw;
+    text-align: center;
+    font-family: cursive;
+    margin-bottom: 20px;
+}
+.box-2{
+    position: relative;
+    width: 60%;
+    padding: 10px;
+    margin: auto;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    transition: .5s;
+}
+.box-2:hover{
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
+}
+.video{
+    position: relative;
+    padding-bottom: 56.25%;
+}
+.video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.overskrift{
+    font-size: 1.4vw;
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: 'Franklin Gothic Medium';
+}
+.tekst-2{
+    font-size: 1vw;
+    flex: 1;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+/* Car Go Vroom */
+@media screen and (min-width: 1000px) {
+    #back h1:only-child {
+        transition: .2s all ease;
+    }
+
+    #back h1:only-child:hover {
+        font-size: 45px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #opening-container {
+        background-size: cover;
+        background-position: 15% 85%;
+    }
+    .film-video {
+        font-size: 25px;
+    }
+    .box-2 {
+        width: 100%;
+    }
+    .overskrift {
+        font-size: 20px;
+    }
+    .video {
+        padding-bottom: 110%;
+    }
+    .tekst-2 {
+        font-size: 16px;
+        
+    }
+}

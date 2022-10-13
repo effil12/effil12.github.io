@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pictures.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pictures</title>
+</head>
+
+<body>
+    <div id="opening-container">
+        <div class="grid-container">
+            <img class="pic-1" src="bilder/Human_Rights_Lens_Bilder/Human_Rights_prosjekt_bilde.jpg">
+            <img class="pic-2" src="bilder/halloween_jpg/3_ny.jpg">
+            <img class="pic-4" src="bilder/levestandard/1.jpg">
+            <img class="pic-5" src="bilder/halloween_jpg/5_ny.jpg">
+            <img class="pic-6" src="bilder/levestandard/2.jpg">
+            <img class="pic-7" src="bilder/halloween_jpg/2_ny.jpg">
+        </div>
+        <div class="overlay-text">
+            <div id="back">
+                <a href="/Work-icons.html">
+                    <h1>back</h1>
+                </a>
+            </div>
+            <h1 style="font-size: 4rem; color: red; ">Pictures</h1>
+            <div class="links">
+                <h2 style=" color: red; font-family: 'Secular One', sans-serif;">Links</h2>
+                <ul>
+                    <li><a href="#human-rights"><h3 style="font-family: 'Poppins', sans-serif; font-weight: 500;">Photo Documentary</h3></a></li>
+                    <li><a href="#halloween"><h3 style="font-family: 'Creepster', cursive;">Photo Story</h3></a></li>
+                </ul>
+            </div>
+            <div id="arrow">
+                <a href="#human-rights">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Human Rights Lens Prosjekt-->
+    <section id="human-rights">
+        <div class="photo-documentary">
+            <h1>Photo Documentary</h1>
+        </div>
+        <div class="box-5">
+            <div class="human-rights-container">
+                <div class="human-rights-bilder">
+                    <div class="human-bilde1">
+                        <img src="bilder/Human_Rights_Lens_Bilder/Human_Rights_prosjekt_bilde.jpg">
+                    </div>
+                    <div class="human-bilde2">
+                        <img src="bilder/Human_Rights_Lens_Bilder/Human_Rights_prosjekt_bilde2.jpg">
+                    </div>
+                </div>
+                <div class="modal">
+                    <span class="close"> <i class="fas fa-times"></i> </span>
+                    <div class="modalcontent">
+                        <img src="" class="modalimg">
+                    </div>
+                </div>
+            </div>
+            <div class="tekst-4">
+                <h2>Human Rights Lens Project</h2>
+                <p>In my production class we had a project where we had to choose one of the human rights and make a
+                    photo documentary with one of the human rights in mind.
+                    I chose "Standard of living" as my human right. My grandma was my model and I took pictures of old
+                    photos from when she was young and pictures in present time to show a documentary of her life, from
+                    young too old.
+                    I named the photo documentary "Livet til ei fra bygda". </p>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+        <script>
+            const images = document.querySelectorAll(".human-rights-bilder img");
+            const modal = document.querySelector(".modal");
+            const modalimg = document.querySelector(".modalimg");
+            const modaltxt = document.querySelector(".modaltxt");
+            const close = document.querySelector(".close");
+
+            images.forEach(image => {
+                image.addEventListener("click", () => {
+                    modalimg.src = image.src;
+                    modal.classList.add("appear");
+
+                    close.addEventListener("click", () => {
+                        modal.classList.remove("appear");
+                    });
+                });
+            });
+        </script>
+    </section>
+
+    <!--Photo Story-->
+    <section id="halloween">
+        <div class="photo-story">
+            <h1>Photo Story</h1>
+        </div>
+        <div class="box-4">
+            <div class="tekst-3">
+                <h2>Photo Story (Halloween themed)</h2>
+                <p>This was a Photo Story project for halloween. It's about a guy who goes for a walk at night, but he
+                    gets this weird feeling that something is keeping an eye on him.
+                    He then turns around too look and something jumps from the bush and attacks him. </p>
+            </div>
+            <div class="slidershow middle">
+
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <div class="slide s1">
+                        <img class="slide_img" src="./bilder/halloween_jpg/1_ny.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="slide_img" src="./bilder/halloween_jpg/2_ny.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="slide_img" src="./bilder/halloween_jpg/3_ny.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="slide_img" src="./bilder/halloween_jpg/4_ny.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img class="slide_img" src="./bilder/halloween_jpg/5_ny.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Photo Story-->
+    <script>
+        var lastScrolltop = 0;
+        back = document.getElementById("back");
+        window.addEventListener("scroll", function() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrolltop) {
+                back.style.top = "-70px";
+                back.style.boxShadow = "0 0 0"
+                back.style.color = "black"
+            } else {
+                back.style.top = "0";
+                back.style.color = "white"
+            }
+            lastScrolltop = scrollTop;
+        })
+    </script>
+</body>
+
+</html>
